@@ -100,5 +100,7 @@ dist
 # DynamoDB Local files
 .dynamodb/
 
+py/
+
 # TernJS port file
 .tern-port
