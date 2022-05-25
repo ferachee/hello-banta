@@ -9,7 +9,7 @@ const store = useThemeStore();
             <h4 class="uk-margin-remove logo-font">okbanta</h4>
         </header>
         <div>
-            <button class="uk-button uk-margin-right" @click="store.toggle">{{store.theme}}</button> 
+            <button class="uk-button uk-margin-right uk-button-secondary uk-button-small" @click="store.toggle">{{store.theme}}</button> 
             <a uk-icon="icon: menu"></a>
         </div>
     </nav>

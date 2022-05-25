@@ -1,8 +1,6 @@
 <template>
-    <div class="img-thumb uk-width-small uk-height-small uk-flex uk-flex-middle uk-flex-center">
-        <h1 class="uk-heading-small uk-margin-remove">
-            {{title}}
-        </h1>
+    <div style="padding:10px" :class="{'clickable':clickable}">
+        <img :width="radius" :height="radius" :src="logoPath" alt="">
     </div>
 </template>
 <script>
@@ -13,10 +11,21 @@ export default {
             type: String,
             false: true,
         },
-        title: {
-            type: String,
-            default: '',
+        radius: {
+            type: Number,
+            default: 80
         },
+        clickable: {
+            type: Boolean,
+            default: true,
+        }
+    },
+    computed: {
+        logoPath(){
+            if(this.imagePath)
+                return `http://localhost:3000/${this.imagePath}`;
+            return '';
+        }
     }
 }
 </script>

@@ -17,6 +17,7 @@ const store = useThemeStore();
 </template>
 
 <style lang="sass">
+    @import "./styles/site.sass"
     @import "@/styles/main.sass"
 </style>
 
